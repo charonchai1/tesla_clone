@@ -2,14 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import "./section.css";
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import Fade from 'react-reveal/Fade';
 
 function Section({title, desc,topBtn,buttomBtn,backgroundImg}) {
   return (
     <Wrap bgImage={backgroundImg}>
+      <Fade bottom>
       <ItemText>
         <h1>{title}</h1>
         <p>{desc}</p>
       </ItemText>
+      </Fade>
+      <Fade bottom>
       <Button>
             <ButtonGroup>
                 <TopButtom>{topBtn}</TopButtom>
@@ -22,6 +26,7 @@ function Section({title, desc,topBtn,buttomBtn,backgroundImg}) {
             </ButtonGroup>
             <ArrowDownwardIcon/>
      </Button>
+     </Fade>
     </Wrap>
   );
 }
